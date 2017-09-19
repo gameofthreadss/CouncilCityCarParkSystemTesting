@@ -58,7 +58,8 @@ public class ExitControllerTest {
     @Test(expected=RuntimeException.class) 
     public void testConstructorWithNullCar() {
         ExitController actualSut = new ExitController(carpark, null, is, os,ui);	
-            assertEquals(actualSut,sut);
+            //assertEquals(actualSut,sut);
+            assertNotNull(actualSut);
            fail("Should have thrown exception");
     }
 
@@ -75,8 +76,19 @@ public class ExitControllerTest {
         //assertEquals(ExitController.STATE.IDLE,sut.state.WAITING);
         //assertTrue("Exit Inside Sensor".equals(is.getId()));
         //assertTrue(true == is.carIsDetected());
-        
-        
+                
+    }
+
+    /**
+     * Test of setState method, of class ExitController.
+     */
+    @Test
+    public void testSetState() {
+        System.out.println("setState");
+        ExitController.STATE newState = ExitController.STATE.IDLE;
+        sut.setState(newState);
+        assertTrue(true);
+            
     }
 
 }
