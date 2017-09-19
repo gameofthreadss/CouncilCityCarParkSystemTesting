@@ -137,6 +137,22 @@ public class ExitControllerTest {
         assertEquals(expResult, result);   
         sut.setState(ExitController.STATE.PROCESSED);
     }
+
+    /**
+     * Test of ticketTaken method, of class ExitController.
+     */
+    @Test
+    public void testTicketTakenProcessedState() {
+        System.out.println("ticketTaken : proccessed ");
+        ExitController.STATE newState = ExitController.STATE.PROCESSED;
+        sut.setState(newState);
+        sut.ticketTaken();
+        boolean expResult = false;
+        boolean result = exitGate.isRaised();
+        assertEquals(expResult, result);
+       sut.setState(ExitController.STATE.TAKEN);
+
+    }
     
 
     
