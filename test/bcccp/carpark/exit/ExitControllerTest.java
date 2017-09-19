@@ -112,18 +112,16 @@ public class ExitControllerTest {
         //execute
         ExitController.STATE newState = ExitController.STATE.WAITING;
         sut.setState(newState);
-        String ticketStr = "A3";
+        String ticketStr = "S1111";
         sut.ticketInserted(ticketStr);
         //assert               
-        boolean expResult = true;
+        boolean expResult = false;
         boolean result = sut.isAdhocTicket(ticketStr);
         assertEquals(expResult, result);   
-        sut.setState(ExitController.STATE.PROCESSED);
-       //0assertTrue(result);
-       
+        sut.setState(ExitController.STATE.REJECTED);
+            
       
     }
-
 
 }
 
