@@ -62,6 +62,23 @@ public class ExitControllerTest {
            fail("Should have thrown exception");
     }
 
+    /**
+     * Test of carEventDetected method, of class ExitController.
+     */
+    @Test
+    public void testCarEventDetected() {
+        System.out.println("carEventDetected");
+        //execute
+        sut.carEventDetected("Exit Inside Sensor", true);
+        
+        //assert               
+        //assertEquals(ExitController.STATE.IDLE,sut.state.WAITING);
+        //assertTrue("Exit Inside Sensor".equals(is.getId()));
+        //assertTrue(true == is.carIsDetected());
+        
+        
+    }
+
 }
 
 
