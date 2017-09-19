@@ -97,12 +97,33 @@ public class ExitControllerTest {
     @Test
     public void testIsAdhocTicket() {
         System.out.println("isAdhocTicket");
-        String barcode = "S1111";
-        boolean expResult = false;
+        String barcode = "A3";
+        boolean expResult = true;
         boolean result = sut.isAdhocTicket(barcode);
         assertEquals(expResult, result);
         
     }
+    /**
+     * Test of ticketInserted method, of class ExitController.
+     */
+    @Test
+    public void testTicketInserted() {
+        System.out.println("ticketInserted");
+        //execute
+        ExitController.STATE newState = ExitController.STATE.WAITING;
+        sut.setState(newState);
+        String ticketStr = "A3";
+        sut.ticketInserted(ticketStr);
+        //assert               
+        boolean expResult = true;
+        boolean result = sut.isAdhocTicket(ticketStr);
+        assertEquals(expResult, result);   
+        sut.setState(ExitController.STATE.PROCESSED);
+       //0assertTrue(result);
+       
+      
+    }
+
 
 }
 
