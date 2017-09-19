@@ -55,6 +55,13 @@ public class ExitControllerTest {
                 
     }
 
+    @Test(expected=RuntimeException.class) 
+    public void testConstructorWithNullCar() {
+        ExitController actualSut = new ExitController(carpark, null, is, os,ui);	
+            assertEquals(actualSut,sut);
+           fail("Should have thrown exception");
+    }
+
 }
 
 
