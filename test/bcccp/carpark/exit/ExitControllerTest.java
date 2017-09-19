@@ -7,6 +7,7 @@ package bcccp.carpark.exit;
 import bcccp.carpark.Carpark;
 import bcccp.carpark.ICarSensor;
 import bcccp.carpark.IGate;
+import bcccp.tickets.adhoc.AdhocTicket;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,6 +26,7 @@ public class ExitControllerTest {
      ICarSensor os;
      IExitUI ui;
      ExitController sut;
+     AdhocTicket adhoc;
     
     public ExitControllerTest() {
     }
@@ -70,10 +72,13 @@ public class ExitControllerTest {
     public void testCarEventDetected() {
         System.out.println("carEventDetected");
         //execute
-        sut.carEventDetected("Exit Inside Sensor", true);
         
+        sut.carEventDetected("Exit Inside Sensor", true);
+        ExitController.STATE newState = ExitController.STATE.WAITING;
+        sut.setState(newState);
+
         //assert               
-        //assertEquals(ExitController.STATE.IDLE,sut.state.WAITING);
+        //assertEquals(sut.state.IDLE,newState);
         //assertTrue("Exit Inside Sensor".equals(is.getId()));
         //assertTrue(true == is.carIsDetected());
                 
@@ -101,6 +106,18 @@ public class ExitControllerTest {
         boolean expResult = true;
         boolean result = sut.isAdhocTicket(barcode);
         assertEquals(expResult, result);
+        System.out.println(barcode + " : It is AdhocTicket");
+
+    }
+    //Test of isAdhocTicket method, of class ExitController with incorrect Value
+    @Test
+    public void testIsNotAdhocTicket() {
+        System.out.println("isNotAdhocTicket");
+        String barcode = "S1111";
+        boolean expResult = false;
+        boolean result = sut.isAdhocTicket(barcode);
+        assertEquals(expResult, result);
+        System.out.println(barcode + " : It is Not AdhocTicket");
         
     }
     /**
@@ -120,6 +137,9 @@ public class ExitControllerTest {
         assertEquals(expResult, result);   
         sut.setState(ExitController.STATE.PROCESSED);
     }
+    
+
+    
 }
 
 
