@@ -151,9 +151,25 @@ public class ExitControllerTest {
         boolean result = exitGate.isRaised();
         assertEquals(expResult, result);
        sut.setState(ExitController.STATE.TAKEN);
-
     }
-    
+     /**
+     * Test of ticketTaken method, of class ExitController.
+     * For non processed state
+     */
+    @Test
+    public void testTicketTakenWithoutProcessedState() {
+        System.out.println("ticketTaken : not proccessed state ");
+        //when(ExitController.STATE.REJECTED).thenReturn(ExitController.STATE.WAITING);
+
+        ExitController.STATE newState = ExitController.STATE.IDLE;
+        sut.setState(newState);
+        sut.ticketTaken();
+
+        ExitController.STATE expResult = ExitController.STATE.IDLE;
+        ExitController.STATE result = sut.getState();
+        assertEquals(expResult, result);
+      
+    }
 
     
 }
