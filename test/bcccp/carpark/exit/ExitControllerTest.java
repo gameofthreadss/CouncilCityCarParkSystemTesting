@@ -118,11 +118,8 @@ public class ExitControllerTest {
         boolean expResult = true;
         boolean result = sut.isAdhocTicket(ticketStr);
         assertEquals(expResult, result);   
-        sut.setState(ExitController.STATE.REJECTED);
-            
-      
+        sut.setState(ExitController.STATE.PROCESSED);
     }
-
 }
 
 
