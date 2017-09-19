@@ -91,6 +91,19 @@ public class ExitControllerTest {
             
     }
 
+    /**
+     * Test of isAdhocTicket method, of class ExitController.
+     */
+    @Test
+    public void testIsAdhocTicket() {
+        System.out.println("isAdhocTicket");
+        String barcode = "S1111";
+        boolean expResult = false;
+        boolean result = sut.isAdhocTicket(barcode);
+        assertEquals(expResult, result);
+        
+    }
+
 }
 
 
