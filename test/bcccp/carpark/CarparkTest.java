@@ -134,12 +134,12 @@ public class CarparkTest {
     public void testIsSeasonTicketValid() {
         System.out.println("isSeasonTicketValid");
         String barcode = "";
-//        Carpark instance = null;
-//        boolean expResult = false;
-//        boolean result = instance.isSeasonTicketValid(barcode);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        Carpark instance = null;
+        boolean expResult = false;
+        boolean result = instance.isSeasonTicketValid(barcode);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
