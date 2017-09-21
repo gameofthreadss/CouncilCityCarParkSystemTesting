@@ -50,9 +50,9 @@ public class CarparkTest {
         System.out.println("deregister");
         ICarparkObserver observer = null;
         Carpark instance = null;
-//        instance.deregister(observer);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        instance.deregister(observer);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
