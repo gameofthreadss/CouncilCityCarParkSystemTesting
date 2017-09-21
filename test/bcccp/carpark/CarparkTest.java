@@ -104,12 +104,12 @@ public class CarparkTest {
     public void testGetAdhocTicket() {
         System.out.println("getAdhocTicket");
         String barcode = "";
-//        Carpark instance = null;
-//        IAdhocTicket expResult = null;
-//        IAdhocTicket result = instance.getAdhocTicket(barcode);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        Carpark instance = null;
+        IAdhocTicket expResult = null;
+        IAdhocTicket result = instance.getAdhocTicket(barcode);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
