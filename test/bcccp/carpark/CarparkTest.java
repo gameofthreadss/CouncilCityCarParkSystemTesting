@@ -76,11 +76,11 @@ public class CarparkTest {
     public void testIsFull() {
         System.out.println("isFull");
         Carpark instance = null;
-//        boolean expResult = false;
-//        boolean result = instance.isFull();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        boolean expResult = false;
+        boolean result = instance.isFull();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
