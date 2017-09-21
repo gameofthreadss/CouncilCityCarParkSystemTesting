@@ -119,12 +119,12 @@ public class CarparkTest {
     public void testCalculateAddHocTicketCharge() {
         System.out.println("calculateAddHocTicketCharge");
         long entryDateTime = 0L;
-//        Carpark instance = null;
-//        float expResult = 0.0F;
-//        float result = instance.calculateAddHocTicketCharge(entryDateTime);
-//        assertEquals(expResult, result, 0.0);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        Carpark instance = null;
+        float expResult = 0.0F;
+        float result = instance.calculateAddHocTicketCharge(entryDateTime);
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
