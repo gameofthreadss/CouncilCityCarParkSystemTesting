@@ -33,11 +33,11 @@ public class UsageRecordTest {
     @Test
     public void testFinalise() {
         System.out.println("finalise");
-//        long endDateTime = 0L;
-//        UsageRecord instance = null;
-//        instance.finalise(endDateTime);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        long endDateTime = 0L;
+        UsageRecord instance = null;
+        instance.finalise(endDateTime);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
