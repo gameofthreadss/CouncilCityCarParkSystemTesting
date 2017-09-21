@@ -174,11 +174,11 @@ public class CarparkTest {
     @Test
     public void testRecordSeasonTicketEntry() {
         System.out.println("recordSeasonTicketEntry");
-//        String ticketId = "";
-//        Carpark instance = null;
-//        instance.recordSeasonTicketEntry(ticketId);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        String ticketId = "";
+        Carpark instance = null;
+        instance.recordSeasonTicketEntry(ticketId);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
