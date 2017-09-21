@@ -60,12 +60,12 @@ public class UsageRecordTest {
     @Test
     public void testGetEndTime() {
         System.out.println("getEndTime");
-//        UsageRecord instance = null;
-//        long expResult = 0L;
-//        long result = instance.getEndTime();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        UsageRecord instance = null;
+        long expResult = 0L;
+        long result = instance.getEndTime();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
