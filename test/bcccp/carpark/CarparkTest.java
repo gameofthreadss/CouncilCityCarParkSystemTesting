@@ -199,10 +199,10 @@ public class CarparkTest {
     @Test
     public void testRecordAdhocTicketExit() {
         System.out.println("recordAdhocTicketExit");
-//        Carpark instance = null;
-//        instance.recordAdhocTicketExit();
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        Carpark instance = null;
+        instance.recordAdhocTicketExit();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
