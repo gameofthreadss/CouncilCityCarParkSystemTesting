@@ -38,4 +38,16 @@ public class AdhocTicketTest {
        
     }
 
+    /**
+     * Test of getCarparkId method, of class AdhocTicket.
+     */
+    @Test
+    public void testGetCarparkId() {
+        System.out.println("getCarparkId");
+        AdhocTicket instance = null;
+        String expResult = "";
+        
+    }
+
+    
 }
