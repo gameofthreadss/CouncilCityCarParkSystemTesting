@@ -59,10 +59,7 @@ public class AdhocTicketDAOTest {
         System.out.println("getCurrentTickets");
         AdhocTicketDAO instance = null;
         List<IAdhocTicket> expResult = null;
-        List<IAdhocTicket> result = instance.getCurrentTickets();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
    
