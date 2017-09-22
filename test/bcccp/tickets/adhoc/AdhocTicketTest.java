@@ -79,4 +79,38 @@ public class AdhocTicketTest {
         long expResult = 0L;
         
     }
+    
+    /**
+     * Test of pay method, of class AdhocTicket.
+     */
+    @Test
+    public void testPay() {
+        System.out.println("pay");
+        long paidDateTime = 0L;
+        float charge = 0.0F;
+       
+    }
+
+    /**
+     * Test of getPaidDateTime method, of class AdhocTicket.
+     */
+    @Test
+    public void testGetPaidDateTime() {
+        System.out.println("getPaidDateTime");
+        AdhocTicket instance = null;
+        long expResult = 0L;
+        
+    }
+
+    /**
+     * Test of getCharge method, of class AdhocTicket.
+     */
+    @Test
+    public void testGetCharge() {
+        System.out.println("getCharge");
+        AdhocTicket instance = null;
+        float expResult = 0.0F;
+        
+    }
+
 }
