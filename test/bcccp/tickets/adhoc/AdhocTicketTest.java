@@ -48,6 +48,35 @@ public class AdhocTicketTest {
         String expResult = "";
         
     }
+/**
+     * Test of getTicketNo method, of class AdhocTicket.
+     */
+    @Test
+    public void testGetTicketNo() {
+        System.out.println("getTicketNo");
+        AdhocTicket instance = null;
+        int expResult = 0;
+        
+    }
 
-    
+    /**
+     * Test of enter method, of class AdhocTicket.
+     */
+    @Test
+    public void testEnter() {
+        System.out.println("enter");
+        long entryDateTime = 0L;
+        
+    }
+
+    /**
+     * Test of getEntryDateTime method, of class AdhocTicket.
+     */
+    @Test
+    public void testGetEntryDateTime() {
+        System.out.println("getEntryDateTime");
+        AdhocTicket instance = null;
+        long expResult = 0L;
+        
+    }
 }
