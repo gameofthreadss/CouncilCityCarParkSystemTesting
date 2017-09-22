@@ -112,5 +112,78 @@ public class AdhocTicketTest {
         float expResult = 0.0F;
         
     }
+/**
+     * Test of toString method, of class AdhocTicket.
+     */
+    @Test
+    public void testToString() {
+        System.out.println("toString");
+        AdhocTicket instance = null;
+        String expResult = "";
+        String result = instance.toString();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
 
+    /**
+     * Test of isCurrent method, of class AdhocTicket.
+     */
+    @Test
+    public void testIsCurrent() {
+        System.out.println("isCurrent");
+        AdhocTicket instance = null;
+        boolean expResult = false;
+     
+    }
+
+    /**
+     * Test of isPaid method, of class AdhocTicket.
+     */
+    @Test
+    public void testIsPaid() {
+        System.out.println("isPaid");
+        AdhocTicket instance = null;
+        boolean expResult = false;
+        
+    }
+
+    /**
+     * Test of exit method, of class AdhocTicket.
+     */
+    @Test
+    public void testExit() {
+        System.out.println("exit");
+        long dateTime = 0L;
+        AdhocTicket instance = null;
+        instance.exit(dateTime);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getExitDateTime method, of class AdhocTicket.
+     */
+    @Test
+    public void testGetExitDateTime() {
+        System.out.println("getExitDateTime");
+        AdhocTicket instance = null;
+        long expResult = 0L;
+      
+    }
+
+    /**
+     * Test of hasExited method, of class AdhocTicket.
+     */
+    @Test
+    public void testHasExited() {
+        System.out.println("hasExited");
+        AdhocTicket instance = null;
+        boolean expResult = false;
+        
+    }
+    
+    
 }
+
+
