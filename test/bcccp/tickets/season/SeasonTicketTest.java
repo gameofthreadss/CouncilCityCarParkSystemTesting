@@ -59,19 +59,32 @@ public class SeasonTicketTest {
         System.out.println("++++++++++++++++++++++++++++++++++++++++");  
     }
     
-//    /**
-//     * Test of recordUsage method, of class SeasonTicket.
-//     */
-//    @Test
-//    public void testRecordUsage() {
-//        System.out.println("++++++++++++++++++++++++++++++++++++++++");  
-//        System.out.println("Test recordUsage() method");
-//        System.out.println("previous item count: "+ sut.getUsageRecords().size());
-//        sut.recordUsage(record);
-//        System.out.println("new item count: "+ sut.getUsageRecords().size());
-//        System.out.println("End of test");   
-//        System.out.println("++++++++++++++++++++++++++++++++++++++++");  
-//    }
+    /**
+     * Test of recordUsage method, of class SeasonTicket.
+     */
+    @Test
+    public void testRecordUsage() {
+        System.out.println("++++++++++++++++++++++++++++++++++++++++");  
+        System.out.println("Test recordUsage() method");
+        System.out.println("previous item count: "+ sut.getUsageRecords().size());
+        sut.recordUsage(record);
+        System.out.println("new item count: "+ sut.getUsageRecords().size());
+        System.out.println("End of test");   
+        System.out.println("++++++++++++++++++++++++++++++++++++++++");  
+    }
+    
+     /**
+     * Test of endUsage method, of class SeasonTicket.
+     */
+    @Test
+    public void testEndUsage() {
+        System.out.println("endUsage");
+        long dateTime = 0L;
+        SeasonTicket instance = null;
+        instance.endUsage(dateTime);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
 
     
     
