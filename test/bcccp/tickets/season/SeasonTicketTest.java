@@ -54,10 +54,10 @@ public class SeasonTicketTest {
      */
     @Test
     public void testRecordUsage() {
-        System.out.println("recordUsage");
-        IUsageRecord record = null;
-        SeasonTicket instance = null;
-        instance.recordUsage(record);
+//        System.out.println("recordUsage");
+//        IUsageRecord record = null;
+//        SeasonTicket instance = null;
+//        instance.recordUsage(record);
     }
 
     
