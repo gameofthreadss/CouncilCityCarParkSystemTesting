@@ -45,8 +45,21 @@ public class SeasonTicketTest {
     public void testGetId() {
         System.out.println("get Ticket Id");        
         System.out.println("Ticket ID is: " +ticketId);
-        System.out.println("Ticket ID from method calss is: " + sut.getId());
+        System.out.println("Ticket ID from method call is: " + sut.getId());
         assertEquals(sut.getId(), ticketId);
+    }
+    
+    /**
+     * Test of recordUsage method, of class SeasonTicket.
+     */
+    @Test
+    public void testRecordUsage() {
+        System.out.println("recordUsage");
+        IUsageRecord record = null;
+        SeasonTicket instance = null;
+        instance.recordUsage(record);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     
