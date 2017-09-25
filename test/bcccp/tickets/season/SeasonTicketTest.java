@@ -36,6 +36,18 @@ public class SeasonTicketTest {
     public void tearDown() {
         sut = null;
     }
+    
+    
+     /**
+     * Test of getId method, of class SeasonTicket.
+     */
+    @Test//(expected=RuntimeException.class) 
+    public void testGetId() {
+        System.out.println("get Ticket Id");        
+        System.out.println("Ticket ID is: " +ticketId);
+        System.out.println("Ticket ID from method calss is: " + sut.getId());
+        assertEquals(sut.getId(), ticketId);
+    }
 
     
     
