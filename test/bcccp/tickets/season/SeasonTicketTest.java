@@ -58,8 +58,6 @@ public class SeasonTicketTest {
         IUsageRecord record = null;
         SeasonTicket instance = null;
         instance.recordUsage(record);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     
