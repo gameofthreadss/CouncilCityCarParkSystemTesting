@@ -80,7 +80,7 @@ public class SeasonTicketTest {
     @Test 
     public void testEndUsageForNullUsgaeRecord() {
         System.out.println("++++++++++++++++++++++++++++++++++++++++");
-        System.out.println("Test endUsage() method");
+        System.out.println("Test endUsage() method with null usage record");
         //sut.recordUsage(record);
         try {
             sut.endUsage(endValidPeriod);
@@ -110,6 +110,24 @@ public class SeasonTicketTest {
         System.out.println("End Valid Period is: "+ sut.getEndValidPeriod()); 
         System.out.println("End of test");
         System.out.println("++++++++++++++++++++++++++++++++++++++++");   
+    }
+    
+    
+    /**
+     * Test of toString method, of class SeasonTicket.
+     */
+    @Test
+    public void testToString() {
+        System.out.println("++++++++++++++++++++++++++++++++++++++++");  
+        System.out.println("Test toString() method");
+        
+        String expResult="Carpark    : Bathurst Chase\n"
+                          +"Ticket No  : S1111";
+        String result = sut.toString().trim();
+        System.out.println("expected: "+expResult); 
+        System.out.println("actual: "+result);
+        assertEquals(expResult, result);
+        System.out.println("++++++++++++++++++++++++++++++++++++++++");  
     }
 
     
