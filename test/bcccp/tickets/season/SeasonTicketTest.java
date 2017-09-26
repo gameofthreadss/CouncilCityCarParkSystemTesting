@@ -129,6 +129,27 @@ public class SeasonTicketTest {
         assertEquals(expResult, result);
         System.out.println("++++++++++++++++++++++++++++++++++++++++");  
     }
+    
+    
+    /*
+    Test constructor metho
+    */
+    @Test
+    public void testSeasonTicketConstructor () {
+        System.out.println("++++++++++++++++++++++++++++++++++++++++");  
+        System.out.println("Test constructor() method");
+        
+        SeasonTicket obj = new SeasonTicket(ticketId,carparkId,startValidPeriod,endValidPeriod);
+        
+       
+
+        String expResult="Carpark    : Bathurst Chase\n"
+                  +"Ticket No  : S1111";
+        String actual = obj.toString().trim();
+        assertEquals(expResult, actual);
+        System.out.println("Test Passed..");
+        System.out.println("++++++++++++++++++++++++++++++++++++++++");  
+	}
 
     
     
