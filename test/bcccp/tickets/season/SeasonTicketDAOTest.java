@@ -1,6 +1,11 @@
 
 package bcccp.tickets.season;
 
+import bcccp.carpark.Carpark;
+import bcccp.carpark.ICarpark;
+import bcccp.tickets.adhoc.AdhocTicketDAO;
+import bcccp.tickets.adhoc.AdhocTicketFactory;
+import bcccp.tickets.adhoc.IAdhocTicketDAO;
 import java.util.Map;
 import org.junit.After;
 import org.junit.Before;
@@ -18,6 +23,12 @@ public class SeasonTicketDAOTest {
     private IUsageRecordFactory factory;
     SeasonTicketDAO sut;
     private ISeasonTicket ticket;
+    
+    
+    IAdhocTicketDAO adhocTicketDAO = new AdhocTicketDAO(new AdhocTicketFactory());
+    ISeasonTicketDAO seasonTicketDAO = new SeasonTicketDAO(new UsageRecordFactory());
+    ISeasonTicket t1 = new SeasonTicket("S1111","Bathurst Chase", 0L, System.currentTimeMillis() );
+    Carpark carpark = new Carpark("Bathurst Chase", 5, adhocTicketDAO, seasonTicketDAO);
     
     
     @Before
@@ -84,6 +95,27 @@ public class SeasonTicketDAOTest {
         int expResult = 0;     
         int actResult = sut.getNumberOfTickets();   
         assertEquals(expResult, actResult);
+        System.out.println("End Test "); 
+        System.out.println("++++++++++++++++++++++++++++++++++++++++"); 
+    }
+    
+     /**
+     * Test of recordTicketExit method, of class SeasonTicketDAO.
+     */
+    @Test
+    public void testRecordTicketExit() {
+        System.out.println("++++++++++++++++++++++++++++++++++++++++"); 
+        System.out.println("Test recordTicketExit() method");
+        
+        
+//        carpark.recordSeasonTicketEntry(t1.getId());
+        
+        seasonTicketDAO.registerTicket(t1);
+        seasonTicketDAO.recordTicketEntry(t1.getId());
+//        seasonTicketDAO.recordTicketEntry("1111");
+        seasonTicketDAO.recordTicketExit(t1.getId());
+        System.out.println("Ticket expires on : "+ t1.getEndValidPeriod()); 
+        long getEndValidPeriod = t1.getEndValidPeriod();
         System.out.println("End Test "); 
         System.out.println("++++++++++++++++++++++++++++++++++++++++"); 
     }
