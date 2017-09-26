@@ -80,7 +80,8 @@ public class SeasonTicket implements ISeasonTicket {
 
 	@Override
 	public void endUsage(long dateTime) {
-		if (currentUsage == null) throw new RuntimeException("SeasonTicket.endUsage : ticket is not in use");
+		if (currentUsage == null)  throw new RuntimeException("SeasonTicket.endUsage : ticket is not in use");
+                
 		
 		currentUsage.finalise(dateTime);
 		currentUsage = null;

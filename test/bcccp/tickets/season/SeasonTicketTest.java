@@ -34,7 +34,7 @@ public class SeasonTicketTest {
         ticketId = "S1111";
         carparkId = "Bathurst Chase";
         startValidPeriod = 0L;
-        endValidPeriod = 0L;
+        endValidPeriod = 10L;
         record = mock(IUsageRecord.class);
         sut = new SeasonTicket(ticketId, carparkId, startValidPeriod, endValidPeriod);
     }
@@ -70,20 +70,46 @@ public class SeasonTicketTest {
         sut.recordUsage(record);
         System.out.println("new item count: "+ sut.getUsageRecords().size());
         System.out.println("End of test");   
+        assertEquals(sut.getUsageRecords().size(), 1);
         System.out.println("++++++++++++++++++++++++++++++++++++++++");  
     }
     
      /**
      * Test of endUsage method, of class SeasonTicket.
      */
-    @Test
+    @Test 
+    public void testEndUsageForNullUsgaeRecord() {
+        System.out.println("++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("Test endUsage() method");
+        //sut.recordUsage(record);
+        try {
+            sut.endUsage(endValidPeriod);
+        } catch (RuntimeException e) {
+            System.out.println("ticket is not in use");
+            return;
+        }
+        System.out.println("End Valid Period is: "+ sut.getEndValidPeriod()); 
+        System.out.println("End of test");
+        System.out.println("++++++++++++++++++++++++++++++++++++++++");   
+    }
+    
+     /**
+     * Test of endUsage method, of class SeasonTicket.
+     */
+    @Test 
     public void testEndUsage() {
-        System.out.println("endUsage");
-        long dateTime = 0L;
-        SeasonTicket instance = null;
-        instance.endUsage(dateTime);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("Test endUsage() method");
+        sut.recordUsage(record);
+        try {
+            sut.endUsage(endValidPeriod);
+        } catch (RuntimeException e) {
+            System.out.println("errrrror");
+            return;
+        }
+        System.out.println("End Valid Period is: "+ sut.getEndValidPeriod()); 
+        System.out.println("End of test");
+        System.out.println("++++++++++++++++++++++++++++++++++++++++");   
     }
 
     
