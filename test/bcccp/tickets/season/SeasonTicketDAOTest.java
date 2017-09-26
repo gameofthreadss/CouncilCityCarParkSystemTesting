@@ -1,14 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package bcccp.tickets.season;
 
+import java.util.Map;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
 
 /**
  *
@@ -16,15 +14,20 @@ import static org.junit.Assert.*;
  */
 public class SeasonTicketDAOTest {
     
-    public SeasonTicketDAOTest() {
-    }
+    private Map<String, ISeasonTicket> currentTickets;
+    private IUsageRecordFactory factory;
+    SeasonTicketDAO sut;
     
     @Before
-    public void setUp() {
+    public void setUp() {         
+        currentTickets = null;
+        factory = mock(IUsageRecordFactory.class);        
+        sut = new SeasonTicketDAO(factory);
     }
     
     @After
     public void tearDown() {
+        sut = null;
     }
 
     /**
