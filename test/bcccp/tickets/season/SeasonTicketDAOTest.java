@@ -17,14 +17,12 @@ public class SeasonTicketDAOTest {
     private Map<String, ISeasonTicket> currentTickets;
     private IUsageRecordFactory factory;
     SeasonTicketDAO sut;
-    private ISeasonTicket ticket,ticket1,ticket2;
+    private ISeasonTicket ticket;
     
     
     @Before
     public void setUp() {      
         ticket = mock(ISeasonTicket.class);
-        ticket1 = mock(ISeasonTicket.class);
-        ticket2= mock(ISeasonTicket.class);
        
         //currentTickets = (Map<String, ISeasonTicket>) currentTickets.put(ticket.getId(), ticket);
         factory = mock(IUsageRecordFactory.class);        
@@ -44,7 +42,10 @@ public class SeasonTicketDAOTest {
         System.out.println("++++++++++++++++++++++++++++++++++++++++");  
         System.out.println("Test get registerTicket() method");   
         sut.registerTicket(ticket);
-        System.out.println("Size: "+ sut.getNumberOfTickets()); 
+        System.out.println("Number of registered tickets: "+ sut.getNumberOfTickets()); 
+        int actualResult = sut.getNumberOfTickets();
+        int expResult = 1;
+        assertEquals(expResult, actualResult);
         System.out.println("End Test "); 
         System.out.println("++++++++++++++++++++++++++++++++++++++++");  
     }
