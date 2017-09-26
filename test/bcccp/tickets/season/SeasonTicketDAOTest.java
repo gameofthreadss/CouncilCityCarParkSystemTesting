@@ -68,6 +68,26 @@ public class SeasonTicketDAOTest {
         System.out.println("++++++++++++++++++++++++++++++++++++++++"); 
         
     }
+    
+    
+    /**
+     * Test of getNumberOfTickets method, of class SeasonTicketDAO.
+     */
+    @Test
+    public void testGetNumberOfTickets() {
+        System.out.println("++++++++++++++++++++++++++++++++++++++++"); 
+        System.out.println("Test getNumberOfTickets() method");
+        sut.registerTicket(ticket);
+        System.out.println("Number of registered tickets/ before : "+ sut.getNumberOfTickets());   
+        sut.deregisterTicket(ticket);
+        System.out.println("Number of registered tickets/ after: "+ sut.getNumberOfTickets()); 
+        int expResult = 0;     
+        int actResult = sut.getNumberOfTickets();   
+        assertEquals(expResult, actResult);
+        System.out.println("End Test "); 
+        System.out.println("++++++++++++++++++++++++++++++++++++++++"); 
+    }
+
 
     
     
